@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*
+font-family: 'Fira Code', monospace;
+font-family: 'Poppins', sans-serif;
+*/
+
+/*
+COLORS: 1. #37023c
+        2. #f47e7c
+        3. #199f7b 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Code', monospace;
+}
+
+body {
+  background: #1a1a1a;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f47e7c;
+  text-shadow: 0 0 5px #f47e7c;
+  height: 100vh;
+}
+
+.fab-container {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.fab-icon-holder {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #37023c;
+  box-shadow: 0 0 10px #f47e7c;
+  transition: all 0.3s;
+}
+
+.fab-icon-holder i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 25px;
+  font-weight: 700;
+  color: #199f7b;
+  text-shadow: 0 0 10px #199f7b;
+}
+
+.fab-icon-holder:hover {
+  transform: rotate(calc(90deg + 45deg));
+}
+
+.fab {
+  width: 60px;
+  height: 60px;
+  background: #37023c;
+  box-shadow: 0 0 10px #199f7b;
+}
+
+.fab-options {
+  list-style-type: none;
+  margin: 0;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.fab:hover + .fab-options, .fab-options:hover {
+  opacity: 1;
+}
