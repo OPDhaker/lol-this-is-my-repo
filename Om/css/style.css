@@ -34,7 +34,7 @@ body {
 .fab-container {
   position: fixed;
   bottom: 50px;
-  left: 50px;
+  right: 50px;
   z-index: 999;
   cursor: pointer;
 }
@@ -45,7 +45,7 @@ body {
   border-radius: 50%;
   background: #37023c;
   box-shadow: 0 0 10px #f47e7c;
-  transition: all 0.3s;
+  transition: all 0.2s ease-in-out;
 }
 
 .fab-icon-holder i {
@@ -59,7 +59,7 @@ body {
   text-shadow: 0 0 10px #199f7b;
 }
 
-.fab-icon-holder:hover {
+.fab:hover {
   transform: rotate(calc(90deg + 45deg));
 }
 
@@ -82,4 +82,23 @@ body {
 
 .fab:hover + .fab-options, .fab-options:hover {
   opacity: 1;
+}
+
+.fab-options li {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+.fab-label {
+  padding: 2px 5px;
+  align-self: center;
+  user-select: none;
+  white-space: nowrap;
+  border-radius: 3px;
+  font-size: 16px;
+  background: #37023c;
+  color: #f47e7c;
+  box-shadow: 0 0 10px #199f7b;
+  margin-right: 10px;
 }
