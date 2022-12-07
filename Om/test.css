@@ -1,25 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/*
-font-family: 'Fira Code', monospace;
-font-family: 'Poppins', sans-serif;
-*/
-
-/*
-COLORS: 1. #37023c
-        2. #f47e7c
-        3. #199f7b 
-*/
-
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: 'Fira Code', monospace;
-}
-
-body {
-  background: #1a1a1a;
 }
 
 .fabs {
@@ -29,21 +11,26 @@ body {
 }
 
 .action {
-  background: #37023c;
+  background: rgb(255, 0, 128);
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  box-shadow: 0 0 10px #199f7b;
-  cursor: pointer;
+  box-shadow: 0 5px 7px 0px gray;
+  transition: background-color 0.4s ease-in-out;
 }
 
 .action i {
   position: absolute;
-  color: #f47e7c;
+  color: white;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 25px;
+  cursor: pointer;
+}
+
+.action:hover {
+  background-color: rgb(255, 103, 179);
 }
 
 .btn {
@@ -51,13 +38,12 @@ body {
   height: 35px;
   width: 35px;
   border-radius: 50%;
-  box-shadow: 0 0 10px #f47e7c;
 }
 
 .btn i {
   position: absolute;
-  font-size: 20px;
-  color: #37023c;
+  font-size: 18px;
+  color: white;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -66,7 +52,7 @@ body {
 .btns {
   position: absolute;
   bottom: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   height: 35px;
   width: 35px;
   transition: 0.3s ease-in-out;
