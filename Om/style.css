@@ -77,3 +77,21 @@ body {
 .btns.open {
   bottom: 50px;
 }
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 64px;
+  color: #f47e7c;
+  text-shadow: 0 0 10px #f47e7c;
+}
+
+.hero .v {
+  color: #199f7b;
+  text-shadow: 0 0 10px #199f7b;
+}

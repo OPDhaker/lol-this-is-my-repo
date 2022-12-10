@@ -9,10 +9,10 @@ function toggleBtn() {
     add.style.display = "none";
     btn.forEach((e, i) => {
       setTimeout(() => {
-        bottom = 40 * i;
+        bottom = 50 * i;
         e.style.bottom = bottom + "px";
         console.log(e);
-      }, 100 * i);
+      }, 150 * i);
     });
   } else {
     add.style.display = "block";
