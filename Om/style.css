@@ -89,9 +89,27 @@ body {
   font-size: 32px;
   color: #f47e7c;
   text-shadow: 0 0 10px #f47e7c;
+  text-align: center;
 }
 
 .hero .v {
   color: #199f7b;
   text-shadow: 0 0 10px #199f7b;
+}
+
+.hero img {
+  background: none;
+  position: fixed;
+  bottom: 30px;
+  right: 90px;
+}
+
+.hero p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f47e7c;
+  text-shadow: 0 0 10px #f47e7c;
+  position: fixed;
+  bottom: 90px;
+  right: 100px;
 }
