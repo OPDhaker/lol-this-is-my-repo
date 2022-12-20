@@ -16,7 +16,7 @@ input,select{vertical-align:middle}
 
 
 
-.grid-item { width: 200px; border-radius: 5px }
+.grid-item { width: 200px; border-radius: 5px; padding: 20px }
 .grid-item-double { width: 400px; }
 .grid {
     max-width: 1200px;
