@@ -16,7 +16,7 @@ input,select{vertical-align:middle}
 
 
 
-.grid-item { width: 200px; }
+.grid-item { width: 200px; border-radius: 5px }
 .grid-item-double { width: 400px; }
 .grid {
     max-width: 1200px;
@@ -32,7 +32,7 @@ input,select{vertical-align:middle}
     color: #555;
     font-weight: bold;
 }
-.grid-item:nth-child(1)	{	background: #AEC6CF;	height: 200px;	}
+.grid-item:nth-child(1)	{	background: rgb(2,0,36); background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 100%);	height: 200px;	}
 .grid-item:nth-child(2)	{	background: #EFDECD;	height: 150px;	}
 .grid-item:nth-child(3)	{	background: #78F7B0;	height: 110px;	}
 .grid-item:nth-child(4)	{	background: #FDB5FF;	height: 320px;	}
