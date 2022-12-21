@@ -14,27 +14,257 @@ COLORS: 1. #37023c
 * {
   margin: 0;
   padding: 0;
+}
+
+*, ::before, ::after {
   box-sizing: border-box;
-  font-family: 'Fira Code', monospace;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a, button, div[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 500;
+  line-height: normal;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1em;
 }
 
 body {
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
   background: #1a1a1a;
+  color: #f47e7c;
+}
+
+.site {
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  justify-content: center;
 }
 
-about-us {
+.container {
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.about {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about .head {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about .head h3 {
+  font-size: 34px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 30px 0;
+}
+
+.about .thumbnail {
+  width: 150px;
+  height: 150px;
   position: relative;
-  max-width: 100%;
+  flex-shrink: 0;
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  min-height: 350px;
-  background: #37023c;
+.about .thumbnail img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(2);
+  transition: transform .5s;
+}
+
+.about .swiper-slide-active .thumbnail img {
+  transform: scale(1);
+}
+
+.about .thumbnail::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% + 30px);
+  height: calc(100% + 10px);
+  background-color: #37023c;
+  border-radius: 50%;
+  z-index: -1;
+  box-shadow: 0 0 20px #199f7b;
+  transition: border-radius .5s .3s;
+}
+
+.about .swiper-slide-active .thumbnail::before {
+  border-radius: 33% 67% 50% 50% / 50% 14% 86% 50%;
+}
+
+
+.about .aside {
+  position: relative;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.about .aside > p {
+  position: relative;
+  font-size: 14px;
+  line-height: normal;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateX(10%);
+  transition: transform 1.5s, opacity 1s;
+}
+
+.about .swiper-slide-active .aside > p {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.about .aside > p::before,
+.about .aside > p::after {
+  font-family: 'Fira Code', monospace;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 1;
+  position: absolute;
+  color: #199f7b;
+  height: 40px;
+  z-index: -1;
+}
+
+.about .aside > p::before {
+  content: open-quote;
+  top: -40px;
+  left: 10px;
+}
+.about .aside > p::after {
+  content: close-quote;
+  right: 0;
+}
+
+.about .aside .name {
+  position: relative;
+  width: fit-content;
+  line-height: 1;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: transform 1s .2s, opacity 1s .3s;
+}
+
+.about .swiper-slide-active .aside .name {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.about .aside .name h4 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #199f7b;
+  opacity: .8;
+}
+
+.about .aside .name p {
+  font-size: 12px;
+  text-align: right;
+}
+
+.about :is(.swiper-button-next, .swiper-button-prev) {
+  background-color: #37023c;
+  top: 35%;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  transition: all .3s;
+  box-shadow: 0 0 10px #199f7b;
+}
+
+.about :is(.swiper-button-next, .swiper-button-prev):hover {
+  background-color: #198266;
+  box-shadow: 0 0 10px #f47e7c;
+}
+
+.about :is(.swiper-button-next, .swiper-button-prev)::after {
+  font-size: 16px;
+  font-weight: 800;
+  color: #f47e7c;
+}
+
+.about .swiper-pagination {
+  position: relative;
+}
+
+.about .swiper-pagination span {
+  background-color: #199f7b;
+  transition: width .3s;
+  opacity: 1;
+}
+
+.about .swiper-pagination .swiper-pagination-bullet-active {
+  width: 26px;
+  border-radius: 26px;
+  background-color: #f47e7c;
+}
+
+
+@media screen and (min-width: 768px) {
+  .about .wrapper {
+    flex-direction: row;
+    padding: 30px 100px;
+  }
+
+  .about .thumbnail {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about :is(.swiper-button-next, .swiper-button-prev) {
+    top: 50%;
+  }
+
+  .about .swiper-slide-active .name {
+    transform: translateX(-50px);
+  }
 }
