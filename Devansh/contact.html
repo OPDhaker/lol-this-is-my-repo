@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact_style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Contact <span id="w">Us</span></h1>
+    </div>
+
+    <div class="form">
+      <form action="#">
+        <!--ROW 1-->
+        <div class="i1" id="i">
+          <label for="name" id="name_label">Name</label><br />
+          <input type="text" required placeholder="Name" id="name" />
+        </div>
+
+        <div class="i2" id="i">
+          <label for="email" id="email_label">Email</label><br />
+          <input
+            type="text"
+            required
+            placeholder="example@website.com"
+            id="email"
+          />
+        </div>
+
+        <!--ROW 2-->
+        <div class="i3" id="i">
+          <label for="school" id="school_label">School</label><br />
+          <input
+            type="text"
+            required
+            placeholder="DPS Kolar Road"
+            id="school"
+          />
+        </div>
+
+        <div class="i4" id="i">
+          <label for="post" id="post_label">Post</label><br />
+          <input
+            type="text"
+            required
+            placeholder="HOD/Teacher/Student/....."
+            id="post"
+          />
+        </div>
+
+        <!--ROW 3-->
+        <div class="i5">
+          <label for="msg" id="msg_label">Message</label><br />
+          <textarea name="message" placeholder="Message..." id="msg" rows="5"></textarea>
+        </div>
+
+        <input type="submit" value="SEND" id="btn">
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*
+font-family: 'Fira Code', monospace;
+font-family: 'Poppins', sans-serif;
+*/
+
+/*
+COLORS: 1. #37023c
+        2. #f47e7c
+        3. #199f7b 
+*/
+
+/*
+Gradients:
+    1. background: linear-gradient(to top left, #37023c 0%, #199f7b 100%);
+    2. background: linear-gradient(to bottom right, #37023c 0%, #f47e7c 100%);
+    3. background: linear-gradient(to bottom right, #199f7b 0%, #f47e7c 100%);
+*/
+
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: #1a1a1a;
+}
+
+/* heading style */
+
+.header {
+  text-align: center;
+  margin: auto;
+  margin-top: 3vw;
+}
+
+.header h1 {
+  font-family: "poppins", sans-serif;
+  font-size: 64px;
+  color: #f47e7c;
+  text-shadow: 0 0 10px #f47e7c;
+}
+
+.header #w {
+  color: #199f7b;
+  text-shadow: 0 0 10px #199f7b;
+}
+
+/* form style */
+.form {
+  margin: auto;
+  margin-top: 2vw;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  width: 75%;
+}
+
+.form label {
+  font-family: "Fira Code", monospace;
+  color: #f47e7c;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+#i {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 100%;
+}
+
+#i input {
+  width: 90%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 2%;
+  font-family: "fira code", monospace;
+  font-weight: bold;
+  color: #37023c;
+  font-size: medium;
+  border-radius: 15px;
+}
+
+.i5 {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 100%;
+  grid-column-start: span 2;
+}
+
+.i5 textarea {
+  width: 95%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 1%;
+  font-family: "fira code", monospace;
+  font-weight: bold;
+  color: #37023c;
+  font-size: medium;
+  border-radius: 15px;
+}
+
+#btn {
+  width: 20%;
+  padding: 2%;
+  font-family: "fira code", monospace;
+  font-size: large;
+  background-color: #37023c;
+  background-position: center;
+  background-size: cover;
+  color: #f47e7c;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+#btn:hover {
+  cursor: pointer;
+  transform: scale(1);
+  opacity: 1;
+}
