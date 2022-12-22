@@ -131,19 +131,15 @@ form {
   text-shadow: 0 0 10px #199f7b;
 }
 
-#i input,
-.i5 textarea {
-  border: 4px solid;
-  border-image: linear-gradient(
-      to bottom right,
-      #199f7b 0%,
-      #f47e7c 50%,
-      #37023c 100%
-    )
-    1;
-}
-
 #i label,
 .i5 label {
   text-shadow: 0 0 10px #f47e7c;
+}
+
+::placeholder {
+  color: #1a1a1a;
+}
+
+::-ms-input-placeholder {
+  color: #1a1a1a;
 }
