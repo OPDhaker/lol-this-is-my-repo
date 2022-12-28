@@ -26,6 +26,7 @@ body {
   position: fixed;
   right: 20px;
   bottom: 20px;
+  transition: all 1s;
 }
 
 .action {
@@ -35,6 +36,7 @@ body {
   border-radius: 50%;
   box-shadow: 0 0 20px #199f7b;
   cursor: pointer;
+  transition: all .3s;
 }
 
 .action i {
@@ -44,6 +46,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 25px;
+  transition: all .3s;
 }
 
 .btn {
@@ -52,6 +55,7 @@ body {
   width: 35px;
   border-radius: 50%;
   box-shadow: 0 0 10px #f47e7c;
+  transition: all .3s ease-in-out;
 }
 
 .btn i {
@@ -61,6 +65,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  transition: all .3s;
 }
 
 .btns {
@@ -69,13 +74,15 @@ body {
   margin-bottom: 10px;
   height: 35px;
   width: 35px;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
+  transition: all .5s;
 }
 .btns.open {
   bottom: 50px;
+  transition: all 1s;
 }
 
 .hero {
@@ -90,6 +97,27 @@ body {
   color: #f47e7c;
   text-shadow: 0 0 10px #f47e7c;
   text-align: center;
+}
+
+.buttons {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.buttons a {
+  padding: 10px 20px;
+  margin: 10px 0;
+  background: #37023c;
+  box-shadow: 0 0 10px #199f7b;
+  text-decoration: none;
+  color: #f47e7c;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all .3s;
+}
+
+.buttons a:hover {
+  text-shadow: 0 0 10px #f47e7c;
 }
 
 .hero .v,
